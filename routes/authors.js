@@ -26,7 +26,6 @@ router.get('/new', (req, res) => {
   })
 })
 
-
 // Create Author Route
 router.post('/', async (req, res) => {
   const author = new Author({
