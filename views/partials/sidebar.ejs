@@ -1,0 +1,66 @@
+<div class="sidebar">
+  <div class="logo_content">
+    <div class="logo">
+      <a href="/"><img width="50px" src="images/infinity.png"></a>
+      <a href="/"><div class="logo_name">Limitless</div></a>
+    </div>
+    <i class='bx bx-menu' id="btn"></i>
+    <a href="/"><img class="below-infinity" width="50px" src="images/infinity.png"></a>
+  </div>
+  <ul class="nav_list">
+    <li>
+      <a href="#">
+        <i class='bx bx-home-alt-2'></i>
+        <span class="links_name">Home</span>
+      </a>
+      <span class="tooltip">Home</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-pound'></i>
+        <span class="links_name">Premium</span>
+      </a>
+      <span class="tooltip">Premium</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bxl-discord-alt'></i>
+        <span class="links_name">Discord</span>
+      </a>
+      <span class="tooltip">Discord</span>
+    </li>
+  </ul>
+  <div class="profile_content">
+    <div class="profile">
+      <div class="profile_details">
+        <img src="images/dylanD.jpg">
+        <div class="name_job">
+          <div class="name">Dylan D</div>
+          <div class="job">Administration</div>
+        </div>
+      </div>
+      <i class='bx bx-log-out' id="log_out"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  let btn = document.querySelector('#btn')
+  let sidebar = document.querySelector('.sidebar')
+  let searchBtn = document.querySelector('.bx-search')
+
+  btn.onclick = sidebarToggle
+  searchBtn.onclick = sidebarToggle
+
+  function sidebarToggle() {
+    sidebar.classList.toggle('active')
+  }
+
+</script>
