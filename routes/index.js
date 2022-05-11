@@ -6,7 +6,8 @@ const sidepanelType = 'sidebar'
 router.get('/', async (req, res) => {
   
   res.render('index', {
-    sidepanelType
+    sidepanelType,
+    loggedIn: false
   })
 })
 

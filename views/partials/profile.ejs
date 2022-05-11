@@ -1,0 +1,31 @@
+<div class="profile_content">
+  <div id="profile" class="profile hide">
+    <div class="profile_details">
+      <img src="images/dylanD.jpg">
+      <!-- <img src="%= discord-pfp %>"> -->
+      <div class="name_job">
+        <div class="name">Dylan D</div>
+        <div class="job">Administration</div>
+      </div>
+    </div>
+    <i class='bx bx-log-out' id="log_out"></i>
+  </div>
+  <div id="loginBtn" class="profile">
+    <div class="profile_details">
+        <a href="/login">Login</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const profile = document.getElementById('profile')
+  const loginBtn = document.getElementById('loginBtn')
+
+  if ('<%= locals.loggedIn %>' === 'true') {
+    profile.classList.remove('hide')
+    loginBtn.classList.add('hide')
+  } else {
+    profile.classList.add('hide')
+    loginBtn.classList.remove('hide')
+  }
+</script>
