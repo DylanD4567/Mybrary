@@ -1,14 +1,14 @@
 <div class="profile_content">
   <div id="profile" class="profile hide">
     <div class="profile_details">
-      <img src="images/dylanD.jpg">
-      <!-- <img src="%= discord-pfp %>"> -->
+      <img src="https://cdn.discordapp.com/avatars/<%= locals.userData.id %>/<%= locals.userData.avatar %>">
       <div class="name_job">
-        <div class="name">Dylan D</div>
-        <div class="job">Administration</div>
+        <div class="name"><%= locals.userData.username %></div>
       </div>
     </div>
-    <i class='bx bx-log-out' id="log_out"></i>
+    <a href="#">
+      <i class='bx bx-log-out' id="log_out"></i>
+    </a>
   </div>
   <div id="loginBtn" class="profile">
     <div class="profile_details">

@@ -225,10 +225,10 @@
 .profile .profile_details .name {
   font-size: 15px;
   font-weight: 400;
-}
-
-.profile .profile_details .job {
-  font-size: 12px;
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .profile #log_out {
@@ -243,6 +243,12 @@
   text-align: center;
   transition: all 0.4s ease;
   background: var(--background-sidebar-dark);
+  cursor: pointer;
+}
+
+.sidebar .profile a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .sidebar.active .profile #log_out {
