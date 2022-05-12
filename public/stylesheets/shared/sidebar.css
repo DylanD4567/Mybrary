@@ -246,10 +246,10 @@
   cursor: pointer;
 }
 
-.sidebar .profile a {
+/* .sidebar .profile a {
   text-decoration: none;
   color: #fff;
-}
+} */
 
 .sidebar.active .profile #log_out {
   left: 88%;
