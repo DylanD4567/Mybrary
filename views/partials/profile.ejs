@@ -6,9 +6,11 @@
         <div class="name"><%= locals.userData?.username %></div>
       </div>
     </div>
-    <a href="#">
-      <i class='bx bx-log-out' id="log_out"></i>
-    </a>
+    <form action="/logout?_method=DELETE" method="post">
+      <button type="submit">
+        <i class='bx bx-log-out' id="log_out"></i>
+      </button>
+    </form>
   </div>
   <div id="loginBtn" class="profile">
     <div class="profile_details">

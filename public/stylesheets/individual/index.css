@@ -8,17 +8,28 @@
   text-align: center;
 }
 
+.col-1 {
+  position: absolute;
+}
+
 .col-1 h2 {
   font-size: 54px;
   color: #ffffff;
 }
 
 .btn-row {
-  margin-top: 2rem;
+  position: grid;
+  grid-template-rows: max-content;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 .btn-row a {
-  color: var(--background-sidebar);
+  width: 100%;
+  color: var(--background-btn);
   background: white;
   padding: 1rem;
   border-radius: 20px;
@@ -26,6 +37,6 @@
 }
 
 .btn-row a:hover {
-  background: var(--background-sidebar);
+  background: var(--background-btn);
   color: #fff;
 }

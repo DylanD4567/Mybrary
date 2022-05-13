@@ -32,7 +32,7 @@ async function loggedInInfo(req, res) {
     loggedIn,
     _id: decoded?.uuid,
     guildId,
-    data: data?.user,
+    data
   }
 }
 

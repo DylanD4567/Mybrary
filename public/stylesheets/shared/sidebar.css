@@ -13,6 +13,11 @@
   width: 240px;
 }
 
+/* .sidebar .nav_list {
+  overflow-y: visible;
+  overflow-x: hidden;
+} */
+
 .sidebar .logo_content .logo {
   display: flex;
   height: 50px;
@@ -49,8 +54,6 @@
   margin-right: 5px;
 }
 
-
-
 .logo_content .logo .logo_name {
   font-size: 20px;
   font-weight: 400;
@@ -82,7 +85,6 @@
   position: relative;
   height: 50px;
   width: 100%;
-  margin: 0 5px;
   list-style: none;
   line-height: 50px;
 }
@@ -125,7 +127,6 @@
   outline: none;
   border: none;
   background: var(--background-sidebar-dark);
-  padding-left: 50px;
   font-size: 18px;
   color: #fff;
 }
@@ -154,8 +155,7 @@
 }
 
 .sidebar ul li a:hover {
-  color: #11101d;
-  background: #fff;
+  background: var(--background-btn);
 }
 
 .sidebar ul li i {
@@ -231,7 +231,7 @@
   text-overflow: ellipsis;
 }
 
-.profile #log_out {
+.profile button #log_out {
   position: absolute;
   left: 50%;
   bottom: 5px;
@@ -242,20 +242,20 @@
   border-radius: 12px;
   text-align: center;
   transition: all 0.4s ease;
-  background: var(--background-sidebar-dark);
+  background: var(--background-sidebar);
+  color: #fff;
   cursor: pointer;
 }
 
-/* .sidebar .profile a {
-  text-decoration: none;
-  color: #fff;
-} */
+.profile button #log_out:hover {
+  background: var(--background-btn);
+}
 
-.sidebar.active .profile #log_out {
+.sidebar.active .profile button #log_out {
   left: 88%;
 }
 
-.sidebar.active .profile #log_out {
+.sidebar.active .profile button #log_out {
   background: none;
 }
 
