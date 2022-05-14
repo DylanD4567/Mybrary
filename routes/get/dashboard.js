@@ -18,8 +18,8 @@ module.exports = {
 
         guildArray.forEach(g => {
             if (g.icon == null) {
-                g.avatar = `https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png`
-            } else g.avatar = `https://sdn.discordapp.com/icons/${g.id}/${g.icon}.png`;
+                g.avatar = `/images/discord_logo.png`
+            } else g.avatar = `https://cdn.discordapp.com/icons/${g.id}/${g.icon}.png`;
             
 
             if (client.guilds.cache.get(g.id)) {
@@ -30,7 +30,6 @@ module.exports = {
             } else g.hasPerm = false;
         })
 
-        
             res.render('dashboard', {
                 sidepanelType,
                 loggedIn: loggedInInfo.loggedIn,

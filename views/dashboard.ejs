@@ -6,12 +6,8 @@
   <% for(var i= 0; i < guilds.length; i++) { %>
     <a href="panel?id=<%= guilds[i].id %>">
       <div class="card">
-        <div>
-          <div class="serverName"><%= guilds[i].name %></div>
-        </div>
-        <div class="serverLogo">
-          <img width="60px" src="<%= guilds[i].logo %>" alt="<%= guilds[i].name %>">
-        </div>
+        <div class="serverName"><%= guilds[i].name %></div>
+        <img width="80px" src="<%= guilds[i].avatar %>" alt="<%= guilds[i].name %>">
       </div>
     </a>
   <% } %>

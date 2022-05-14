@@ -1,10 +1,10 @@
 .cardBox{
   position: relative;
-  width: 100%;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
   grid-gap: 30px;
+  justify-content: center;
 }
 
 .cardBox a{
@@ -15,10 +15,10 @@
   position: relative;
   background: rgba(255, 255, 255, .15);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
-  padding: 30px;
+  padding: 10px;
   border-radius: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -26,21 +26,11 @@
   position: relative;
   font-size: 20px;
   color: #fff;
+  text-align: center;
+  margin: auto;
 }
 
-.cardBox a .card .serverLogo img{
+.cardBox a .card img{
   border-radius: 50%;
-}
-
-/* responsive design */
-@media (max-width: 991px){
-  .cardBox{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px){
-  .cardBox{
-    grid-template-columns: repeat(1, 1fr);
-  }
+  margin: auto;
 }

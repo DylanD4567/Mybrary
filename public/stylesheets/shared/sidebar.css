@@ -7,16 +7,12 @@
   background: var(--background-sidebar);
   padding: 6px 14px;
   transition: all 0.5s ease;
+  z-index: 98;
 }
 
 .sidebar.active {
   width: 240px;
 }
-
-/* .sidebar .nav_list {
-  overflow-y: visible;
-  overflow-x: hidden;
-} */
 
 .sidebar .logo_content .logo {
   display: flex;
@@ -71,6 +67,7 @@
   line-height: 50px;
   transform: translateX(-50%);
   cursor: pointer;
+  z-index: 99;
 }
 
 .sidebar.active #btn{
