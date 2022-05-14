@@ -99,26 +99,26 @@ client.on('ready', () => {
   })
 
   // POST
-  let filesPost = fs.readdirSync("./routes/post").filter(f => f.endsWith(".js"));
+  // let filesPost = fs.readdirSync("./routes/post").filter(f => f.endsWith(".js"));
 
-  filesPost.forEach(f => {
-    const file = require(`./routes/post/${f}`)
-    if (file && file.name) {
-      app.post(file.name, file.run)
-      console.log(`[Dashboard] - (Post) Loaded ${file.name}`);
-    }
-  })
+  // filesPost.forEach(f => {
+  //   const file = require(`./routes/post/${f}`)
+  //   if (file && file.name) {
+  //     app.post(file.name, file.run)
+  //     console.log(`[Dashboard] - (Post) Loaded ${file.name}`);
+  //   }
+  // })
 
   // PUT
-  let filesPut = fs.readdirSync("./routes/put").filter(f => f.endsWith(".js"));
+  // let filesPut = fs.readdirSync("./routes/put").filter(f => f.endsWith(".js"));
 
-  filesPut.forEach(f => {
-    const file = require(`./routes/put/${f}`)
-    if (file && file.name) {
-      app.put(file.name, file.run)
-      console.log(`[Dashboard] - (Put) Loaded ${file.name}`);
-    }
-  })
+  // filesPut.forEach(f => {
+  //   const file = require(`./routes/put/${f}`)
+  //   if (file && file.name) {
+  //     app.put(file.name, file.run)
+  //     console.log(`[Dashboard] - (Put) Loaded ${file.name}`);
+  //   }
+  // })
 
   // DELETE
   let filesDelete = fs.readdirSync("./routes/delete").filter(f => f.endsWith(".js"));
