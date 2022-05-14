@@ -1,0 +1,7 @@
+.serverName{
+  padding: 2rem;
+}
+
+.serverName h1, .serverName h2{
+  color: var(--white);
+}

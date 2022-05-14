@@ -1,0 +1,70 @@
+<header>
+	<link rel="stylesheet" href="stylesheets/individual/panel.css">
+</header>
+
+		<!-- Server Name -->
+		<div class="serverName">
+			<center>
+				<h1><%= name %></h1>
+				<br>
+				<h2>Server Information</h2>
+			</center>
+		</div>
+
+		<!-- Cards -->
+		<div class="cardBox">
+			<div class="card">
+				<div class="numbers"><%= memberCount %></div>
+				<div class="cardName">Members</div>
+			</div>
+			<div class="card">
+				<div>
+					<div class="numbers"><%= channels %></div>
+					<div class="cardName">Channels</div>
+				</div>
+			</div>
+			<div class="card">
+				<div>
+					<div class="numbers"><%= roles %></div>
+					<div class="cardName">Roles</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- All Members -->
+		<div class="details">
+			<div class="allMembers">
+				<div class="cardHeader">
+					<h2>All Members</h2>
+					<a class="btn" id="viewAllMembersBtn" onclick="viewAllMembers()"><%= viewAllMembersBtn %> </a>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<td>Profile Picture</td>
+							<td>Username</td>
+							<td>User ID</td>
+							<td>Status</td>
+							<td>Action</td>
+						</tr>
+					</thead>
+					<tbody>
+						<%- include('../partials/_all-members') %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+<script>
+	// viewAllMembers
+	function viewAllMembers() {
+		const activeMembers = '<%= viewAllMembers %>'
+
+		if (activeMembers === 'false') {
+			window.location.href = '/panel?viewAllMembers=true';
+		} else {
+			window.location.href = '/panel?viewAllMembers=false';
+		}
+	}
+</script>

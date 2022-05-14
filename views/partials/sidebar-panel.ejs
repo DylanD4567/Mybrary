@@ -1,11 +1,11 @@
 <div class="sidebar">
   <div class="logo_content">
     <div class="logo">
-      <img width="50px" src="images/infinity.png">
-      <div class="logo_name">Limitless</div>
+      <a href="/"><img width="50px" src="images/infinity.png"></a>
+      <a href="/"><div class="logo_name">Limitless</div></a>
     </div>
     <i class='bx bx-menu' id="btn"></i>
-    <img class="below-infinity" width="50px" src="images/infinity.png">
+    <a href="/"><img class="below-infinity" width="50px" src="images/infinity.png"></a>
   </div>
   <ul class="nav_list">
     <li>
@@ -51,10 +51,16 @@
   let searchBtn = document.querySelector('.bx-search')
 
   btn.onclick = sidebarToggle
-  searchBtn.onclick = sidebarToggle
+  searchBtn.onclick = searchClick
 
   function sidebarToggle() {
     sidebar.classList.toggle('active')
+  }
+
+  function searchClick() {
+    if (!sidebar.classList.value.includes('active')) {
+      sidebar.classList.add('active')
+    }
   }
 
 </script>

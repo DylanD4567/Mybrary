@@ -116,6 +116,7 @@
 
 .sidebar ul li input {
   position: absolute;
+  display: none;
   height: 100%;
   width: 100%;
   left: 0;
@@ -126,6 +127,11 @@
   background: var(--background-sidebar-dark);
   font-size: 18px;
   color: #fff;
+  padding-left: 3.3rem;
+}
+
+.sidebar.active ul li input {
+  display: block;
 }
 
 .sidebar ul li .bx-search {
@@ -167,7 +173,7 @@
 .sidebar .links_name {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 .sidebar.active .links_name {

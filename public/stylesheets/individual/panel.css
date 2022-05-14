@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* main */
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 13rem);
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.cardBox .card {
+  position: relative;
+  background: rgba(255, 255, 255, .15);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  padding: 10px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: #287bff;
+  text-align: center;
+}
+
+.cardBox .card .cardName {
+  position: relative;
+  color: #fff;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.cardBox .card .top-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.details {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.details .allMembers {
+  position: relative;
+  display: grid;
+  min-height: 100px;
+  background: rgba(255, 255, 255, .15);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardHeader h2 {
+  font-weight: 600;
+  color: #287bff;
+}
+
+.btn {
+  position: relative;
+  padding: 5px 10px;
+  background: #287bff;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details table thead td {
+  font-weight: 600;
+}
+
+.details .allMembers table tr {
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .allMembers table tr:last-child {
+  border-bottom: none;
+}
+
+.details .allMembers table tbody tr:hover {
+  background: #287bff;
+  color: #fff;
+}
+
+.details .allMembers table tr td {
+  padding: 10px;
+}
+
+.details .allMembers table tr td:last-child {
+  text-align: end;
+}
+
+.details .allMembers table tr td:nth-child(2) {
+  text-align: center;
+}
+
+.details .allMembers table tr td:nth-child(3) {
+  text-align: center;
+}
+
+.details .allMembers table tr td img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.details .allMembers table tbody tr td a {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0.8rem;
+  text-decoration: none;
+}
+
+.details .allMembers table tr td .viewMember {
+  background: #C765F8;
+  cursor: pointer;
+}
+
+.status.Online {
+  padding: 2px 4px;
+  background: #8de02c;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.Offline {
+  padding: 2px 4px;
+  background: gray;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.DND {
+  padding: 2px 4px;
+  background: #f00;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.Idle {
+  padding: 2px 4px;
+  background: #f9ca3f;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+  .allMembers {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardHeader h1 {
+    font-size: 25px
+  }
+
+  .cardHeader h2 {
+    font-size: 20px;
+  }
+}
+
+/* USER INFO PAGE */
+.userInfo {
+  position: relative;
+  padding: 2.5rem;
+}
+
+.userInfo .top {
+  display: flex;
+  align-items: flex-start;
+}
+
+.userInfo .top img {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.userInfo .top .username {
+  font-size: 30px;
+  margin: auto 2rem;
+}
+
+.userInfo .middle table {
+  width: calc(100% - 12rem);
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-left: 12rem;
+}
+
+.userInfo .middle table thead {
+  background: #287bff;
+}
+
+.userInfo .middle table thead tr td {
+  font-size: 20px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-align: center;
+}
+
+.userInfo .middle table tbody tr td {
+  padding-top: 1rem;
+  text-align: center;
+}

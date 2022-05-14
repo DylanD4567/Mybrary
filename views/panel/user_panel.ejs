@@ -1,0 +1,45 @@
+<header>
+	<link rel="stylesheet" href="stylesheets/individual/panel.css">
+</header>
+
+		<!-- Server Name -->
+		<div class="serverName">
+			<center>
+				<h1><%= name %></h1>
+				<br>
+				<h2>User Information</h2>
+        <br>
+			</center>
+		</div>
+
+    <!-- User -->
+    <div class="userInfo">
+			<div class="top">
+				<img src="<%= pageData.profilePic %>">
+				<div class="username"><%= pageData.username %></div>
+			</div>
+
+			<div class="middle">
+				<table>
+					<thead>
+						<tr>
+							<td>Username</td>
+							<td>User ID</td>
+							<td>Roles</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= pageData.username %></td>
+							<td><%= pageData.userId %></td>
+							<td>Role11</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>Role12</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+    </div>

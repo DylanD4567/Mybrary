@@ -1,0 +1,13 @@
+<% for(var i= 0; i < members.length; i++) { %>  
+  <% if (members[i].status !== 'Offline' || viewAllMembers === 'true' || members[i].searched === true) { %>  
+    <tr>
+      <td class="profile-photo"><img src="<%= members[i].profilePic %>"></td>
+      <td><%= members[i].username %></td>
+      <td><%= members[i].userId %></td>
+      <td><span class="status <%= members[i].status %>"><%= members[i].status %></span></td>
+      <td>
+        <a href="/user_panel?userId=<%= members[i].userId %>" class="viewMember">View</a>
+      </td>
+    </tr>
+  <% } %> 
+<% } %> 
