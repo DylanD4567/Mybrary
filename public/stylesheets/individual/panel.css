@@ -107,17 +107,7 @@
 
 .details .allMembers table tr td {
   padding: 10px;
-}
-
-.details .allMembers table tr td:last-child {
-  text-align: end;
-}
-
-.details .allMembers table tr td:nth-child(2) {
-  text-align: center;
-}
-
-.details .allMembers table tr td:nth-child(3) {
+  min-width: 10rem;
   text-align: center;
 }
 
@@ -136,6 +126,10 @@
 .details .allMembers table tr td .viewMember {
   background: #C765F8;
   cursor: pointer;
+}
+
+.details .allMembers table tr td .viewMember:hover {
+  border: solid #000;
 }
 
 .status.Online {
@@ -194,11 +188,11 @@
 /* USER INFO PAGE */
 .userInfo {
   position: relative;
-  padding: 2.5rem;
 }
 
 .userInfo .top {
   display: flex;
+  margin-left: 2.5rem;
   align-items: flex-start;
 }
 
@@ -212,11 +206,15 @@
   margin: auto 2rem;
 }
 
+.userInfo .middle {
+  overflow-x: auto;
+}
+
 .userInfo .middle table {
-  width: calc(100% - 12rem);
+  width: 100%;
+  min-width: 40rem;
   border-collapse: collapse;
-  margin-top: 10px;
-  margin-left: 12rem;
+  margin-top: 3rem;
 }
 
 .userInfo .middle table thead {
@@ -225,12 +223,87 @@
 
 .userInfo .middle table thead tr td {
   font-size: 20px;
-  text-decoration: underline;
-  text-underline-offset: 2px;
   text-align: center;
 }
 
 .userInfo .middle table tbody tr td {
-  padding-top: 1rem;
+  position: relative;
+  height: 2.5rem;
   text-align: center;
+}
+
+.userInfo .middle table tbody tr .center {
+  position: relative;
+  margin: auto 0;
+}
+
+.userInfo .middle table tbody tr .rolesTd {
+  overflow-x: auto;
+}
+
+.roleBackground {
+  position: relative;
+  background: #292b2f;
+  color: #fff;
+  border-radius: 25px;
+  display: flex;
+  height: 85%;
+  margin-right: .5rem;
+}
+
+.dot {
+  margin: auto 5px;
+  height: 20px;
+  width: 20px;
+  background: #bbb;
+  border-radius: 50%;
+}
+
+.status-user {
+  position: absolute;
+  font-size: 30px;
+  border-radius: 50%;
+  background: var(--background);
+  padding: 3px;
+  transform: translate(-2.5rem, 7.5rem);
+}
+
+.status-user.bxs-circle.online {
+  color: #3ba55d;
+}
+
+.status-user.bxs-moon {
+  color: #faa81a;
+}
+
+.status-user.bxs-minus-circle {
+  color: #ed4245;
+}
+
+.status-user.bxs-circle.offline {
+  color: #747f8d;
+}
+
+.grid-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10rem);
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.grid-btns .mute {
+  width: 100%;
+  background: #287bff;
+}
+
+.grid-btns .kick {
+  width: 100%;
+  background: #c46900;
+}
+
+.grid-btns .ban {
+  width: 100%;
+  background: #780800;
 }

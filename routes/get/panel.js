@@ -25,6 +25,7 @@ module.exports = {
       const username = member.user.username
       const profilePic = member.displayAvatarURL()
 
+      // TOP 3 CARDS
       const memberCount = guild.members.cache.size
       const channels = guild.channels.cache.size
       const roles = guild.roles.cache.size

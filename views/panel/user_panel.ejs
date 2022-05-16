@@ -15,7 +15,10 @@
     <!-- User -->
     <div class="userInfo">
 			<div class="top">
-				<img src="<%= pageData.profilePic %>">
+				<div>
+					<img src="<%= pageData.profilePic %>">
+					<i class='status-user bx bxs-<%= pageData.status %>'></i>
+				</div>
 				<div class="username"><%= pageData.username %></div>
 			</div>
 
@@ -32,14 +35,45 @@
 						<tr>
 							<td><%= pageData.username %></td>
 							<td><%= pageData.userId %></td>
-							<td>Role11</td>
+							<td class="rolesTd">
+								<div class="roleBackground">
+									<span class="dot dot0"></span>
+									<div class="center"><%= roles[0].name %></div>
+								</div>
+							</td>
 						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td>Role12</td>
-						</tr>
+						<%- include('../partials/userRoles.ejs') %> 
 					</tbody>
 				</table>
 			</div>
+
+			<br>
+			<br>
+			<center><h2 style="color: orange;">Warning One Click Actions</h2></center>
+			<br>
+			<center><h3 style="color: red;"><%= errorMessage %></h3></center>
+			<br>
+			
+			<div class="bottom">
+				<div class="grid-btns">
+
+					<form action="/user_panel/timeout?_method=PUT&userId=<%= pageData.userId %>" method="post">
+						<button type="submit" class="btn mute"><%= pageData.timedout %></button>
+					</form>
+
+					<form action="/user_panel/kick?_method=PUT&userId=<%= pageData.userId %>" method="post">
+					<button class="btn kick">Kick</button>
+					</form>
+
+					<form action="/user_panel/ban?_method=PUT&userId=<%= pageData.userId %>" method="post">
+					<button class="btn ban">Ban</button>
+					</form>
+
+				</div>
+			</div>
     </div>
+
+		<script>
+			let circle = document.querySelector('.dot0')
+    	circle.style.background = '<%= roles[0].color %>'
+		</script>

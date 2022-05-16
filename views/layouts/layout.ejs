@@ -23,6 +23,11 @@
     function homeClick() {
       if (sidebar2.classList.value.includes('active')) {
         sidebar2.classList.remove('active')
+
+        if (btnSearch && btnSearch2) {
+          btnSearch.classList.remove('displayOff')
+          btnSearch2.classList.add('displayOff')
+        }
       }
     }
   </script>

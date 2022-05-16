@@ -9,23 +9,29 @@
   </div>
   <ul class="nav_list">
     <li>
-      <i class='bx bx-search'></i>
-      <input type="text" placeholder="Search...">
+      <form action="/panel" method="get" id="search">
+        <button type="submit" id="btn-search-2" class="displayOff">
+          <i class='bx bx-search'></i>
+        </button>
+        <i class='bx bx-search' id="btn-search"></i>
+        <input type="search" name="search" placeholder="Search..." autocomplete="off" value="<%= search %>">
+        <input type='submit' class="displayOff">
+      </form>
       <span class="tooltip">Search</span>
     </li>
     <li>
-      <a href="#">
+      <a href="/dashboard">
         <i class='bx bx-grid-alt'></i>
         <span class="links_name">Dashboard</span>
       </a>
       <span class="tooltip">Dashboard</span>
     </li>
     <li>
-      <a href="#">
-        <i class='bx bx-user'></i>
-        <span class="links_name">User</span>
+      <a href="/panel">
+        <i class='bx bx-home-alt-2'></i>
+        <span class="links_name">Panel</span>
       </a>
-      <span class="tooltip">User</span>
+      <span class="tooltip">Panel</span>
     </li>
     <li>
       <a href="#">
@@ -48,19 +54,36 @@
 <script>
   let btn = document.querySelector('#btn')
   let sidebar = document.querySelector('.sidebar')
-  let searchBtn = document.querySelector('.bx-search')
+  let btnSearch = document.querySelector('#btn-search')
+  let btnSearch2 = document.querySelector('#btn-search-2')
 
   btn.onclick = sidebarToggle
-  searchBtn.onclick = searchClick
+  btnSearch.onclick = searchClick
 
   function sidebarToggle() {
-    sidebar.classList.toggle('active')
+    if (sidebar.classList.value.includes('active')) {
+        sidebar.classList.remove('active')
+
+        btnSearch.classList.remove('displayOff')
+        btnSearch2.classList.add('displayOff')
+      } else {
+        sidebar.classList.add('active')
+        
+        btnSearch.classList.add('displayOff')
+        btnSearch2.classList.remove('displayOff')
+      }
   }
 
   function searchClick() {
     if (!sidebar.classList.value.includes('active')) {
       sidebar.classList.add('active')
+
+      btnSearch.classList.add('displayOff')
+      btnSearch2.classList.remove('displayOff')
     }
   }
+
+
+  
 
 </script>

@@ -135,16 +135,27 @@
 }
 
 .sidebar ul li .bx-search {
-  position: absolute;
+  position: relative;
   z-index: 99;
   color: #fff;
   font-size: 22px;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .sidebar ul li .bx-search:hover {
   background: #fff;
   color: #1d1b31;
+}
+
+.sidebar ul li form button {
+  background: none;
+  border-radius: 12px;
+  border: none;
+}
+
+.sidebar ul li form .displayOff {
+  display: none;
 }
 
 .sidebar ul li a {

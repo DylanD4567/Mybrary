@@ -1,0 +1,17 @@
+<% for (var i= 1; i < roles.length; i++) { %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td class="rolesTd">
+      <div class="roleBackground">
+        <span class="dot dot<%= i %>"></span>
+        <div class="center"><%= roles[i].name %></div>
+      </div>
+    </td>
+  </tr>
+
+  <script>
+    circle = document.querySelector('.dot<%= i %>')
+    circle.style.background = '<%= roles[i].color %>'
+  </script>
+<% } %>
