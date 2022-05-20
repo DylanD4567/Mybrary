@@ -24,9 +24,10 @@ async function loggedInInfo(req, res) {
     data = await dashboardSchema.findOne({
       _id: decoded.uuid
     });
-    console.log(data)
 
-    loggedIn = true;
+    if (data !== null) {
+      loggedIn = true
+    }
   }
 
 
