@@ -30,21 +30,22 @@ module.exports = {
       const channels = guild.channels.cache.size
       const roles = guild.roles.cache.size
 
-      let prefix = ';'
       let members = [];
       let bots = [];
       let searchMembers = [];
-
-      let searchOptions = {}
-      if (req.query.search && req.query.search != '') {
-        searchOptions.search = new RegExp(req.query.search, 'i')
-      }
+      let prefix = ';'
 
       const configData = await configSchema.findOne({
         guildId
       })
 
+      // Bot Prefix
       if (configData) prefix = configData.prefix
+
+      let searchOptions = {}
+      if (req.query.search && req.query.search != '') {
+        searchOptions.search = new RegExp(req.query.search, 'i')
+      }
 
       const members1 = guild.members.cache
 
@@ -125,10 +126,10 @@ module.exports = {
           userData: loggedInInfo.data?.user,
           id: guild.id,
           name: guild.name,
-          prefix,
           memberCount,
           channels,
           roles,
+          prefix,
           username,
           profilePic,
           members,

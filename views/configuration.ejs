@@ -1,0 +1,89 @@
+<header>
+	<link rel="stylesheet" href="stylesheets/individual/configuration.css">
+</header>
+
+
+		<!-- Server Name -->
+		<div class="serverName">
+			<center><h1><%= name %> - Configuration </h1></center>
+		</div>
+
+
+		<!-- Cards -->
+		<div class="cardBox">
+
+			<!-- Bot Prefix -->
+			<div class="card">
+				<div>
+					<div class="result"><%= prefix %></div>
+					<div class="cardName">Prefix</div>
+					<div class="form">
+						<form action="/prefix?id=<%= id %>" method="post">
+							<input type="text" name="prefix" placeholder="Change Prefix" autocomplete="off">
+          		<button class="save" type="submit">Save</button>
+          	</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Server Logs Channel -->
+			<div class="card">
+				<div>
+					<div class="result"><%= serverLogsChannel %></div>
+					<div class="cardName">Server Logs</div>
+					<form action="/serverlogs?id=<%= id %>" method="post">
+						<select name="serverLogsChannelId" class="select">
+							<option disabled selected>Pick a Chanel</option>
+							<%- include('partials/_channels') %>
+						</select>
+						<button type="submit" class="save">Save</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Moderation Logs Channel -->
+			<div class="card">
+				<div>
+					<div class="result"><%= moderationLogsChannel %></div>
+					<div class="cardName">Moderation Logs</div>
+					<form action="/moderationlogs?id=<%= id %>" method="post">
+						<select name="modLogsChannelId" class="select">
+							<option disabled selected>Pick a Chanel</option>
+							<%- include('partials/_channels') %>
+						</select>
+						<button type="submit" class="save">Save</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Welcome Logs Channel -->
+			<div class="card">
+				<div>
+					<div class="result"><%= welcomeChannel %></div>
+					<div class="cardName">Welcome Channel</div>
+					<form action="/welcomechannel?id=<%= id %>" method="post">
+						<select name="welcomeChannelId" class="select">
+							<option disabled selected>Pick a Chanel</option>
+							<%- include('partials/_channels') %>
+						</select>
+						<button type="submit" class="save">Save</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Chatbot Channel -->
+			<div class="card">
+				<div>
+					<div class="result"><%= chatbotChannel %></div>
+					<div class="cardName">Chatbot Channel</div>
+					<form action="/chatbotchannel?id=<%= id %>" method="post">
+						<select name="chatbotChannelId" class="select">
+							<option disabled selected>Pick a Chanel</option>
+							<%- include('partials/_channels') %>
+						</select>
+						<button type="submit" class="save">Save</button>
+					</form>
+				</div>
+			</div>
+
+		</div>

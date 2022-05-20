@@ -1,0 +1,45 @@
+<header>
+	<link rel="stylesheet" href="/stylesheets/individual/commands.css">
+</header>
+
+
+		<!-- Server Name -->
+		<div class="serverName">
+			<center>
+				<h1><%= name %> - Disable Commands</h1>
+			</center>
+		</div>
+
+
+		<!-- Miscellaneous -->
+		<div class="sectionName">
+			<center>
+				<h1>Miscellaneous</h1>
+				<p id="miscP" onclick="sectionChange('miscCards', 'miscP')">Show</p>
+			</center>
+		</div>
+
+		<div id="miscCards" class="close">
+			<%- include('partials/commands-disable/_misc-disable-commands') %> 
+		</div>
+		<!------------------->
+
+
+		<!-- Moderation -->
+		<div class="sectionName">
+			<center>
+				<h1>Moderation</h1>
+				<p id="modP" onclick="sectionChange('modCards', 'modP')">Show</p>
+			</center>
+		</div>
+
+		<div id="modCards" class="close">
+			<%- include('partials/commands-disable/_mod-disable-commands') %> 
+		</div>
+		<!---------------->
+
+
+<script src="javascripts/commands.js"></script>
+<script>
+	loaded('<%= disabledCmds %>')
+</script>
