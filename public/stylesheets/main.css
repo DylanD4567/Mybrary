@@ -50,4 +50,5 @@ body {
   color: white;
   transition: all 0.5s ease;
   overflow: auto;
+  padding-bottom: 2rem;
 }
