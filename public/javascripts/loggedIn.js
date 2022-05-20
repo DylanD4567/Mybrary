@@ -28,6 +28,8 @@ async function loggedInInfo(req, res) {
     loggedIn = true;
   }
 
+  console.log(data.access_token)
+
   return {
     loggedIn,
     _id: decoded?.uuid,
