@@ -4,14 +4,9 @@
     <td></td>
     <td class="rolesTd">
       <div class="roleBackground">
-        <span class="dot dot<%= i %>"></span>
+        <span style="--dot-color:<%= roles[i].color %>;" class="dot"></span>
         <div class="center"><%= roles[i].name %></div>
       </div>
     </td>
   </tr>
-
-  <script>
-    circle = document.querySelector('.dot<%= i %>')
-    circle.style.background = '<%= roles[i].color %>'
-  </script>
 <% } %>

@@ -185,60 +185,72 @@
   }
 }
 
+
+
+
 /* USER INFO PAGE */
 .userInfo {
   position: relative;
 }
 
 .userInfo .top {
-  display: flex;
-  margin-left: 2.5rem;
-  align-items: flex-start;
+  display: grid;
+  justify-content: center;
 }
 
 .userInfo .top img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 10rem;
   border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .userInfo .top .username {
   font-size: 30px;
-  margin: auto 2rem;
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
-.userInfo .middle {
+.userInfo .bottom {
   overflow-x: auto;
 }
 
-.userInfo .middle table {
+.userInfo .bottom table {
   width: 100%;
   min-width: 40rem;
   border-collapse: collapse;
   margin-top: 3rem;
 }
 
-.userInfo .middle table thead {
+.userInfo .bottom table thead {
   background: #287bff;
 }
 
-.userInfo .middle table thead tr td {
+.userInfo .bottom table thead tr td {
   font-size: 20px;
   text-align: center;
 }
 
-.userInfo .middle table tbody tr td {
+.userInfo .bottom table tbody tr td {
   position: relative;
   height: 2.5rem;
   text-align: center;
 }
 
-.userInfo .middle table tbody tr .center {
+.userInfo .bottom table tbody tr .center {
   position: relative;
   margin: auto 0;
 }
 
-.userInfo .middle table tbody tr .rolesTd {
+.userInfo .bottom table tbody tr .rolesTd {
   overflow-x: auto;
+}
+
+.userInfo .middle {
+  margin-top: 2rem;
 }
 
 .roleBackground {
@@ -251,36 +263,37 @@
   margin-right: .5rem;
 }
 
+.roleBackground span {
+  background: var(--dot-color);
+}
+
 .dot {
   margin: auto 5px;
   height: 20px;
   width: 20px;
-  background: #bbb;
   border-radius: 50%;
 }
 
-.status-user {
-  position: absolute;
+.userInfo .top .pfp-container i.status-user {
+  position: relative;
   font-size: 30px;
   border-radius: 50%;
-  background: var(--background);
-  padding: 3px;
-  transform: translate(-2.5rem, 7.5rem);
+  transform: translate(13.5rem, -3.5rem);
 }
 
-.status-user.bxs-circle.online {
+.userInfo .top .pfp-container i.status-user.bxs-circle.online {
   color: #3ba55d;
 }
 
-.status-user.bxs-moon {
+.userInfo .top .pfp-container i.status-user.bxs-moon {
   color: #faa81a;
 }
 
-.status-user.bxs-minus-circle {
+.userInfo .top .pfp-container i.status-user.bxs-minus-circle {
   color: #ed4245;
 }
 
-.status-user.bxs-circle.offline {
+.userInfo .top .pfp-container i.status-user.bxs-circle.offline {
   color: #747f8d;
 }
 
