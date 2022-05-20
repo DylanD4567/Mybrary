@@ -24,11 +24,11 @@ async function loggedInInfo(req, res) {
     data = await dashboardSchema.findOne({
       _id: decoded.uuid
     });
+    console.log(data)
 
     loggedIn = true;
   }
 
-  console.log(data.access_token)
 
   return {
     loggedIn,
