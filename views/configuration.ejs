@@ -34,6 +34,7 @@
 					<form action="/serverlogs?id=<%= id %>" method="post">
 						<select name="serverLogsChannelId" class="select">
 							<option disabled selected>Pick a Chanel</option>
+							<option value="None Set">Turn Off</option>
 							<%- include('partials/_channels') %>
 						</select>
 						<button type="submit" class="save">Save</button>
@@ -49,6 +50,7 @@
 					<form action="/moderationlogs?id=<%= id %>" method="post">
 						<select name="modLogsChannelId" class="select">
 							<option disabled selected>Pick a Chanel</option>
+							<option value="None Set">Turn Off</option>
 							<%- include('partials/_channels') %>
 						</select>
 						<button type="submit" class="save">Save</button>
@@ -64,6 +66,7 @@
 					<form action="/welcomechannel?id=<%= id %>" method="post">
 						<select name="welcomeChannelId" class="select">
 							<option disabled selected>Pick a Chanel</option>
+							<option value="None Set">Turn Off</option>
 							<%- include('partials/_channels') %>
 						</select>
 						<button type="submit" class="save">Save</button>
@@ -79,6 +82,7 @@
 					<form action="/chatbotchannel?id=<%= id %>" method="post">
 						<select name="chatbotChannelId" class="select">
 							<option disabled selected>Pick a Chanel</option>
+							<option value="None Set">Turn Off</option>
 							<%- include('partials/_channels') %>
 						</select>
 						<button type="submit" class="save">Save</button>

@@ -1,0 +1,67 @@
+<header>
+	<link rel="stylesheet" href="stylesheets/individual/modules/join-leave-settings.css">
+</header>
+
+
+		<!-- Server Name -->
+		<div class="serverName">
+			<center><h1><%= name %> - Modules </h1></center>
+		</div>
+    
+    <div class="overall">
+      
+      <h3>Join Message</h3>
+      
+      <label class="switch">
+        <input id="switch-join" class="toggleSwitch" type="checkbox" onchange="joinChange('<%= id %>')">
+        <span class="slider"></span>
+      </label>
+      
+      <div id="join-message" class="hide">
+          <select id="selectJoinId" class="select">
+            <%- include('../partials/_channels-default', {
+              type: 'join'
+            }) %>
+          </select>
+          <div class="text-area-container">
+            <textarea id="textareaJoin" maxlength="2000" class="text-area"><%= welcomeMessage %></textarea>
+          </div>
+          
+          <button onclick="saveClicked('<%= id %>')" type="submit" class="save">Save</button>
+          <p id="errorMessage" style="color: red; margin-top: 1rem;" class="hide">Error Saving</p>
+          <p id="successMessage" style="color: rgb(0, 255, 0); margin-top: 1rem;" class="hide">Save Successful</p>
+      </div>
+
+      <br>
+      <br>
+      <br>
+        
+      <h3>Leave Message</h3>
+      
+      <label class="switch">
+        <input id="switch-leave" class="toggleSwitch" type="checkbox" onchange="leaveChange('<%= id %>')">
+        <span class="slider"></span>
+      </label>
+      
+      <div id="leave-message" class="hide">
+          <select id="selectLeaveId" class="select">
+            <%- include('../partials/_channels-default', {
+              type: 'leave'
+            }) %>
+          </select>
+          <div class="text-area-container">
+            <textarea id="textareaLeave" maxlength="2000" class="text-area"><%= leaveMessage %></textarea>
+          </div>
+          
+          <button onclick="saveClickedLeave('<%= id %>')" type="submit" class="save">Save</button>
+          <p id="errorMessageLeave" style="color: red; margin-top: 1rem;" class="hide">Error Saving</p>
+          <p id="successMessageLeave" style="color: rgb(0, 255, 0); margin-top: 1rem;" class="hide">Save Successful</p>
+      </div>
+
+        
+    </div>
+
+    <script src="javascripts/join-leave-settings.js"></script>
+    <script>
+      loaded('<%= joinMessageActive %>', '<%= leaveMessageActive %>')
+    </script>

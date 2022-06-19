@@ -1,35 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-/* main */
-.close{
-  display: none;
-}
-
-.sectionName{
-  padding-top: 2rem;
-}
-
-.sectionName h1{
-  color: var(--white);
-}
-
-.sectionName p{
-  color: var(--white);
-  background: var(--background-btn);
-  cursor: pointer;
-}
-
-.cardBox{
+.cardBox {
   position: relative;
   width: 100%;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, min(14rem));
+  grid-template-columns: repeat(auto-fill, min(20rem));
   grid-gap: 30px;
   justify-content: center;
 }
 
-.cardBox .card{
+.cardBox .card {
   position: relative;
   background: rgba(255, 255, 255, .15);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
@@ -41,16 +22,22 @@
   align-items: center;
 }
 
-.cardBox .card .cardName{
+.cardBox .card .cardName {
   color: var(--white);
-  font-size: 1.8em;
+  font-size: 20px;
   width: 100%;
   text-align: center;
 }
 
-.center{
+.cardBox .card .settings {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  padding: 5px 0;
+  width: 100%;
+  margin-top: 10px;
+  background: var(--background-btn);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
 }

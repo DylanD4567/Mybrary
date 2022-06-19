@@ -7,7 +7,7 @@ module.exports = {
 
     const channelId = req.body.serverLogsChannelId;
     const guildId = req.query.id || req.cookies.guildId;
-
+    
     if (channelId === '') return res.redirect(`/configuration`)
 
     if (guildId) {

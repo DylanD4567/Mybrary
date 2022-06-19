@@ -95,7 +95,6 @@ module.exports = {
           username,
           profilePic,
           search: req.query.search,
-          active: 'configuration',
           
           prefix,
           channels,

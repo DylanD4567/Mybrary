@@ -1,10 +1,8 @@
 const loggedInFunction = require('../../public/javascripts/loggedIn')
-const cmdSchema = require('../../models/disable-commands')
-const configSchema = require('../../models/config-schema')
 const sidepanelType = 'sidebar-panel'
 
 module.exports = {
-  name: '/commands',
+  name: '/modules',
   run: async (req, res) => {
     const loggedInInfo = await loggedInFunction(req, res)
 
@@ -19,15 +17,6 @@ module.exports = {
       const userId = data.userId;
       const guild = client.guilds.cache.get(guildId)
       const member = guild.members.cache.get(userId)
-      const username = member.user.username
-      const profilePic = member.displayAvatarURL()
-
-      const configData = await configSchema.findOne({
-        guildId
-      })
-
-      if (configData) prefix = configData.prefix
-
 
       if (!req.cookies.guildId) {
         res.cookie('guildId', guildId, {
@@ -35,29 +24,13 @@ module.exports = {
         });
       }
 
-      // Find Disabled Cmds
-      const disabledCmdResults = await cmdSchema.find({
-        guildId
-      })
-
-      let disabledCmds = []
-
-      disabledCmdResults.forEach(cmdResult => {
-        disabledCmds.push(cmdResult.command)
-      });
-
       if (member.permissions.has('ADMINISTRATOR')) {
-        res.render("commands", {
+        res.render("modules", {
           sidepanelType,
           loggedIn: loggedInInfo.loggedIn,
           userData: loggedInInfo.data?.user,
-          id: guild.id,
           name: guild.name,
-          prefix,
-          username,
-          profilePic,
-          search: req.query.search,
-          disabledCmds
+          search: req.query.search
         })
       } else res.redirect("/dashboard")
     } else res.redirect("/")

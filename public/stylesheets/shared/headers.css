@@ -3,5 +3,15 @@
 }
 
 .serverName h1, .serverName h2{
-  color: var(--white);
+  color: #fff;
+}
+
+.sectionName h1{
+  color: #fff;
+}
+
+.sectionName p{
+  color: #fff;
+  background: var(--background-btn);
+  cursor: pointer;
 }

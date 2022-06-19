@@ -18,12 +18,15 @@
   <div class="loader">
     <%- include('../partials/loading.ejs') %>
   </div>
-
+  
   <div class="content">
     <%- include(`../partials/${sidepanelType}.ejs`) %>
+
     <div class="home_content" onclick="homeClick()">
       <%- body %>
     </div>
+    
+    <%- include('../partials/footer.ejs') %>
   </div>
 
   <script>

@@ -1,10 +1,18 @@
 :root {  
-  /* --background: linear-gradient(to bottom right, #331342, #241184, #4B3AA4, #7162C0, #6296C0); */
-  /* --background: linear-gradient(to right, #331342, #241184, #4B3AA4, #7162C0); */
   --background: #4B3AA4;
   --background-sidebar: #2F0A59;
   --background-sidebar-dark: #331342;
-  --background-btn: #7162C0;
+  --background-btn: #287bff;
+  --color-text: #fff;
 }
 
+/* --color-text: #287bff */
+/* --background-btn: #287bff; */
+/* --background: #4B3AA4; */
+/* --background-sidebar: #2F0A59; */
+/* --background-sidebar-dark: #331342; */
+/* --background-btn: #7162C0; */
+
+/* --background: linear-gradient(to bottom right, #331342, #241184, #4B3AA4, #7162C0, #6296C0); */
+/* --background: linear-gradient(to right, #331342, #241184, #4B3AA4, #7162C0); */
 /* #331342, #241184, #4B3AA4, #7162C0 */

@@ -12,6 +12,8 @@ const schema = mongoose.Schema({
     ChatbotChannel: String,
     WelcomeChannel: reqString,
     WelcomeMessage: reqString,
+    LeaveChannel: reqString,
+    LeaveMessage: reqString,
     JoinRole: Array,
     shiftLength: String,
     SuggestionsChannel: reqString,

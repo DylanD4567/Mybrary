@@ -10,12 +10,16 @@ module.exports = {
         const guildId = loggedInInfo.guildId;
         const guild = client.guilds.cache.get(guildId);
         const member = guild.members.cache.get(userId);
+        const staffId = loggedInInfo.data.userId;
+        const staff = guild.members.cache.get(staffId);
         
         if (!userId || !guildId || !member) return res.redirect('/panel')
 
         if (loggedInInfo.loggedIn === true) {
             if(member.bannable) {
-                member.ban()
+                member.ban({
+                    reason: `Banned through dashboard by ${staff.displayName}`
+                })
             } else {
                 return res.redirect(`/user_panel?userId=${userId}&errorMessage=Member not bannable!`)
             }

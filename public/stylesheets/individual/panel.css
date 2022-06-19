@@ -24,7 +24,7 @@
   position: relative;
   font-weight: 500;
   font-size: 2.5em;
-  color: #287bff;
+  color: var(--color-text);
   text-align: center;
 }
 
@@ -68,13 +68,13 @@
 
 .cardHeader h2 {
   font-weight: 600;
-  color: #287bff;
+  color: var(--color-text);
 }
 
 .btn {
   position: relative;
   padding: 5px 10px;
-  background: #287bff;
+  background: var(--background-btn);
   text-decoration: none;
   color: #fff;
   border-radius: 6px;
@@ -101,7 +101,7 @@
 }
 
 .details .allMembers table tbody tr:hover {
-  background: #287bff;
+  background: var(--background-btn);
   color: #fff;
 }
 
@@ -226,7 +226,7 @@
 }
 
 .userInfo .bottom table thead {
-  background: #287bff;
+  background: var(--background-btn);
 }
 
 .userInfo .bottom table thead tr td {

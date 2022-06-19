@@ -136,8 +136,7 @@ module.exports = {
           bots,
           viewAllMembers,
           viewAllMembersBtn,
-          search: req.query.search,
-          active: 'dashboard'
+          search: req.query.search
         })
       } else res.redirect("/dashboard")
     } else res.redirect("/")

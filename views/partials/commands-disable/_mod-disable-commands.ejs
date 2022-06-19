@@ -1,10 +1,257 @@
-<!--  -->
+<!-- Ban -->
 <div class="card">
   <div>
-    <div class="cardName"></div>
+    <div class="cardName">Ban</div>
     <div class="center">
       <label class="switch">
-        <input class="toggleSwitch" id="" type="checkbox" checked onchange="toggleChange('', '<%= id %>')">
+        <input class="toggleSwitch" id="ban" type="checkbox" checked onchange="toggleChange('ban', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Check-Warns -->
+<div class="card">
+  <div>
+    <div class="cardName">Check-Warns</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="check-warns" type="checkbox" checked onchange="toggleChange('check-warns', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Delete-Channel -->
+<div class="card">
+  <div>
+    <div class="cardName">Delete-Channel</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="delete-channel" type="checkbox" checked onchange="toggleChange('delete-channel', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Delete-Warn -->
+<div class="card">
+  <div>
+    <div class="cardName">Delete-Warn</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="delete-warn" type="checkbox" checked onchange="toggleChange('delete-warn', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Kick -->
+<div class="card">
+  <div>
+    <div class="cardName">Kick</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="kick" type="checkbox" checked onchange="toggleChange('kick', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Nickname -->
+<div class="card">
+  <div>
+    <div class="cardName">Nickname</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="nickname" type="checkbox" checked onchange="toggleChange('nickname', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Purge -->
+<div class="card">
+  <div>
+    <div class="cardName">Purge</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="purge" type="checkbox" checked onchange="toggleChange('purge', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Rename -->
+<div class="card">
+  <div>
+    <div class="cardName">Rename</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="rename" type="checkbox" checked onchange="toggleChange('rename', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Slowmode -->
+<div class="card">
+  <div>
+    <div class="cardName">Slowmode</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="slowmode" type="checkbox" checked onchange="toggleChange('slowmode', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Timeout -->
+<div class="card">
+  <div>
+    <div class="cardName">Timeout</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="timeout" type="checkbox" checked onchange="toggleChange('timeout', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Topic -->
+<div class="card">
+  <div>
+    <div class="cardName">Topic</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="topic" type="checkbox" checked onchange="toggleChange('topic', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Unban -->
+<div class="card">
+  <div>
+    <div class="cardName">Unban</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="unban" type="checkbox" checked onchange="toggleChange('unban', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Untimeout -->
+<div class="card">
+  <div>
+    <div class="cardName">Untimeout</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="untimeout" type="checkbox" checked onchange="toggleChange('untimeout', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Warn -->
+<div class="card">
+  <div>
+    <div class="cardName">Warn</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="warn" type="checkbox" checked onchange="toggleChange('warn', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Deafen -->
+<div class="card">
+  <div>
+    <div class="cardName">Deafen</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="deafen" type="checkbox" checked onchange="toggleChange('deafen', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Disconnect -->
+<div class="card">
+  <div>
+    <div class="cardName">Disconnect</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="disconnect" type="checkbox" checked onchange="toggleChange('disconnect', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Move -->
+<div class="card">
+  <div>
+    <div class="cardName">Move</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="move" type="checkbox" checked onchange="toggleChange('move', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Undeafen -->
+<div class="card">
+  <div>
+    <div class="cardName">Undeafen</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="undeafen" type="checkbox" checked onchange="toggleChange('undeafen', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Vc-Mute -->
+<div class="card">
+  <div>
+    <div class="cardName">Vc-Mute</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="vc-mute" type="checkbox" checked onchange="toggleChange('vc-mute', '<%= id %>')">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Vc-Unmute -->
+<div class="card">
+  <div>
+    <div class="cardName">Vc-Unmute</div>
+    <div class="center">
+      <label class="switch">
+        <input class="toggleSwitch" id="vc-unmute" type="checkbox" checked onchange="toggleChange('vc-unmute', '<%= id %>')">
         <span class="slider"></span>
       </label>
     </div>
