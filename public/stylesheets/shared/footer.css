@@ -7,3 +7,10 @@
   text-align: center;
   pointer-events: none;
 }
+
+@media (max-width: 380px) {
+  .footer {
+    margin-left: 2rem;
+    font-size: 15px;
+  }
+}
