@@ -108,3 +108,13 @@
     border-radius: 0;
   }
 }
+
+@media (max-width: 400px) {
+  .cardBox .card .result {
+    font-size: 28px;
+  }
+
+  .cardBox .card .cardName {
+    font-size: 20px;
+  }
+}

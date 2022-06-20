@@ -2,6 +2,22 @@
   padding: 2rem;
 }
 
+.serverName h1 {
+  font-size: 4vw;
+}
+
+@media (max-width: 430px) {
+  .serverName h1 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .serverName h1 {
+    font-size: 60px;
+  }
+}
+
 .serverName h1, .serverName h2{
   color: #fff;
 }
