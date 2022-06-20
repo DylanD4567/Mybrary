@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -39,6 +43,10 @@
 
 .sidebar .logo_content .below-infinity {
   display: block;
+}
+
+.sidebar .logo_content .below-infinity:hover {
+  content: url('/images/Limitless_Logo.png');
 }
 
 .sidebar.active .logo_content .below-infinity {
