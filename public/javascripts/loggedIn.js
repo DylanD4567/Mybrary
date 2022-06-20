@@ -15,7 +15,7 @@ async function loggedInInfo(req, res) {
   let decoded;
   let loggedIn = false;
   let data;
-
+  
   try {
     decoded = jwt.verify(req.cookies.token, process.env.jwt_secret);
   } catch (e) {}
@@ -23,13 +23,12 @@ async function loggedInInfo(req, res) {
   if (decoded) {
     data = await dashboardSchema.findOne({
       _id: decoded.uuid
-    });
-
+    })
+    
     if (data !== null) {
-      loggedIn = true
+      loggedIn = true;
     }
   }
-
 
   return {
     loggedIn,

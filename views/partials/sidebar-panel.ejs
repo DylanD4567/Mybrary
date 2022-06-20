@@ -14,7 +14,7 @@
           <i class='bx bx-search'></i>
         </button>
         <i class='bx bx-search' id="btn-search"></i>
-        <input type="search" name="search" placeholder="Search..." autocomplete="off" value="<%= search %>">
+        <input id="searchBar" type="search" name="search" placeholder="Search..." autocomplete="off" value="<%= search %>">
         <input type='submit' class="displayOff">
       </form>
       <span class="tooltip">Search</span>
@@ -63,6 +63,7 @@
   let sidebar = document.querySelector('.sidebar')
   let btnSearch = document.querySelector('#btn-search')
   let btnSearch2 = document.querySelector('#btn-search-2')
+  let searchBar = document.getElementById('searchBar')
 
   btn.onclick = sidebarToggle
   btnSearch.onclick = searchClick
@@ -78,6 +79,8 @@
         
         btnSearch.classList.add('displayOff')
         btnSearch2.classList.remove('displayOff')
+        
+        searchBar.focus()
       }
   }
 
@@ -87,6 +90,8 @@
 
       btnSearch.classList.add('displayOff')
       btnSearch2.classList.remove('displayOff')
+
+      searchBar.focus()
     }
   }
 

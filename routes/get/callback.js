@@ -38,7 +38,8 @@ module.exports = {
             id: user.id,
             username: user.username,
             discriminator: user.discriminator,
-            avatar: user.avatar
+            avatar: user.avatar,
+            pfp: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
         };
 
         await data.save();

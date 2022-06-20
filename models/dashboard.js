@@ -10,7 +10,8 @@ const Schema = mongoose.Schema({
         id: String,
         username: String,
         discriminator: String,
-        avatar: String
+        avatar: String,
+        pfp: String
     },
     lastUpdate: {
         type: Number,

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
+.home_content {
+  overflow-y: hidden;
+}
+
 .title {
   position: absolute;
   width: 100%;
@@ -7,7 +11,7 @@
   margin-top: 10rem;
   font-size: 10vw;
   font-family: 'Kdam Thmor Pro', sans-serif;
-  -webkit-text-stroke: 2px #000;
+  -webkit-text-stroke: 1px #000;
 }
 
 .title {
@@ -22,6 +26,19 @@
   animation: shine 4s linear infinite;
 }
 
+@media (max-width: 632px) {
+  .title {
+    font-size: 12vw;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 14vw;
+    -webkit-text-stroke: none
+  }
+}
+
 @keyframes shine {
   to {
     background-position: 200% center;
@@ -29,7 +46,7 @@
 }
 
 .btn64-center {
-  height:100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
