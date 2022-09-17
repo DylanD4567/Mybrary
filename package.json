@@ -2,13 +2,12 @@
   "name": "baseplate-express",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
     "sass-watch": "sass --no-source-map --watch styles/index.scss public/stylesheets/individual/index-scss.css",
     "nodemon-watch": "nodemon server.js",
     "node-start": "node server.js",
     "dev": "npm-run-all --parallel sass-watch nodemon-watch",
-    "start": "npm-run-all --parallel sass-watch node-start"
+    "star87it": "npm-run-all --parallel sass-watch node-start"
   },
   "keywords": [],
   "author": "",
