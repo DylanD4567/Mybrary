@@ -51,6 +51,6 @@ body {
   left: 78px;
   color: white;
   transition: all 0.5s ease;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-bottom: 2rem;
 }

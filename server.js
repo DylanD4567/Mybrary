@@ -10,7 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
   disLink = `http://localhost:${process.env.PORT}/callback`
 }
 
-
 // DISCORD //
 
 const {

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --discord-embed-background: #2F3136;
+}
+
+.container-embed {
+  position: relative;
+  margin-left: 5rem;
+  width: fit-content;
+  min-width: 150px;
+  max-width: 700px;
+  min-height: 100px;
+  background: var(--discord-embed-background);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.embed-side {
+  position: absolute;
+  width: 6px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #FF0000;
+  border-radius: 5px 0 0 5px;
+}
+
+.embed-content {
+  margin-left: 7px;
+  height: 100%;
+  margin: 20px 10px 10px 20px;
+}
+
+.embed-title {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.embed-description {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin-top: 14px;
+}
